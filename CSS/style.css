@@ -1,0 +1,14 @@
+body {
+  background-color: bisque;
+}
+#page-header {
+  padding: 25px;
+  height: 7rem !important;
+  width: 100% !important;
+  background-color: burlywood;
+}
+
+#searchBar input {
+  width: 45%;
+  margin-left: 25%;
+}
