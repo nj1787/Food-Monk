@@ -1,3 +1,6 @@
+body {
+  background-color: bisque;
+}
 #page-header {
   padding: 25px;
   height: 7rem !important;
