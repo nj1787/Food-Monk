@@ -19,10 +19,14 @@
     <div class="container-fluid">
       <div class="row" id="page-header">
         <div class="col-sm-10 col-md-10 col-lg-10">
-          <h1 class="text-center mx-5 px-5">Welcome To Food Monk</h1>
+          <h1 class="text-center mx-5 px-5" style="margin-left: 25% !important">
+            Welcome To Food Monk
+          </h1>
         </div>
         <span class="col-sm-2 col-md-2 col-lg-2">
-          <button class="btn btn-secondary">Favourites</button>
+          <a href="./singleMeal.html"
+            ><button class="btn btn-secondary">Favourites</button></a
+          >
         </span>
       </div>
       <div class="row" id="search">
@@ -31,7 +35,7 @@
             <input
               class="form-control me-2"
               type="search"
-              placeholder="Search"
+              placeholder="Search For A Meal"
               aria-label="Search"
               id="meal-search-bar"
             />
@@ -41,6 +45,13 @@
               id="submitButton"
             >
               Search
+            </button>
+            <button
+              style="margin-left: 2%"
+              class="btn btn-outline-danger"
+              id="clearSearch"
+            >
+              Clear Search
             </button>
           </form>
         </div>
