@@ -13,10 +13,40 @@
       crossorigin="anonymous"
     />
     <link rel="stylesheet" href="../CSS/singleMeal.css" />
-    <title>Food-Monk || Single-Meal</title>
+    <title>Meals App || Meal-Details</title>
   </head>
   <body>
-    <h1>Hello, world!</h1>
+    <div class="container-fluid">
+      <div class="row" id="page-header">
+        <div class="col-sm-10 col-md-10 col-lg-10">
+          <h1 id="mealName"></h1>
+          <div
+            class="d-grid gap-2 d-md-flex justify-content-md-end"
+            style="margin-left: 35px; margin-top: 30px"
+          >
+            <a href="favourites.html"
+              ><button class="btn btn-primary me-md-2" type="button">
+                Favourites
+              </button></a
+            >
+            <a href="index.html"
+              ><button class="btn btn-primary" id="homeButton" type="button">
+                Home
+              </button></a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="row" id="mealImage">
+        <img id="thumbnailImage" />
+      </div>
+      <div class="row" id="mealIngredients">
+        <h1 class="text-center" style="margin-top: 140px">Ingredients</h1>
+      </div>
+      <div class="row" id="mealRecipe">
+        <h1 class="text-center" style="margin-top: 140px">Recipe</h1>
+      </div>
+    </div>
 
     <!-- Optional JavaScript; choose one of the two! -->
 
