@@ -44,6 +44,7 @@ recipe.classList.add("border");
 recipe.style.maxWidth = "780px";
 recipe.style.marginLeft = "350px";
 recipe.style.marginTop = "70px";
+recipe.style.padding = "35px";
 recipe.textContent = localStorage.getItem("temp-meal-recipe");
 recipe.style.backgroundColor = "#e9ecef";
 mealRecipe.appendChild(recipe);
@@ -56,6 +57,9 @@ homeButton.addEventListener("click", (event) => {
   localStorage.removeItem("temp-meal-name");
   localStorage.removeItem("temp-meal-image");
   localStorage.removeItem("temp-meal-recipe");
+  localStorage.removeItem("temp-meal-ingredient1");
+  localStorage.removeItem("temp-meal-ingredient2");
+  localStorage.removeItem("temp-meal-ingredient3");
   //For Debugging
   console.log("Home Button Clicked");
 });

@@ -58,8 +58,6 @@ submitBtn.addEventListener("click", (event) => {
       </div>
     </div>`;
 
-    /********************************************************************************/
-
     /*Create A Button Group Where Both Buttons Would Be Displayed*/
     const buttonGroup = document.createElement("div");
     buttonGroup.setAttribute("class", "d-grid gap-2 d-md-block");
@@ -97,29 +95,31 @@ submitBtn.addEventListener("click", (event) => {
 
     /*Add Meal To The Favourites List Upon Button Click*/
     favouriteButton.addEventListener("click", (event) => {
-      event.preventDefault();
+      // event.preventDefault();
+
+      var existingDataString = localStorage.getItem("meals");
+      var existingData = existingDataString
+        ? JSON.parse(existingDataString)
+        : [];
+
+      var mealsData = {
+        "meal-name": mealName,
+        "meal-image": mealImage,
+      };
+
+      existingData.push(mealsData);
+
+      var mealsDataString = JSON.stringify(existingData);
+
+      localStorage.setItem("meals", mealsDataString);
 
       //For Debugging
       console.log("Add To Favourites Button Clicked");
 
-      //For persistent storage
-      localStorage.setItem("meal-name", mealName);
-      localStorage.setItem("meal-image", mealImage);
-      localStorage.setItem("meal-recipe", mealRecipe);
-
-      // favouriteMeals.push(
-      //   Object.assign({
-      //     "meal-name": `${mealName}`,
-      //     "meal-image": `${mealImage}`,
-      //     "meal-recipe": `${mealRecipe}`,
-      //   })
-      // );
-
-      console.log(localStorage);
-
       alert("Meal Added To Your Favourites");
       //For Debugging
       // console.log(favouriteMeals);
+      console.log(mealsDataString);
     });
     buttonGroup.append(detailsPageLink, favouriteButton);
     parentDiv.append(childDiv, buttonGroup);
