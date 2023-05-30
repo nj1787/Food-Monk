@@ -1,14 +1,31 @@
-body {
-  background-color: bisque;
+#brand-name {
+  margin-left: 25%;
+  font-size: 2.6rem;
+  font-weight: 900;
 }
-#page-header {
-  height: 7rem !important;
-  width: 100% !important;
-  background-color: burlywood;
+
+#meals-data-display {
+  margin-top: 10%;
 }
 
 #mealName {
-  margin-top: 25px;
-  position: absolute;
-  margin-left: 550px;
+  margin-top: 6%;
+  margin-left: 45%;
+  font-weight: 900;
 }
+
+#ingredients {
+  margin-top: 6%;
+  margin-left: 40%;
+  font-weight: 900;
+}
+
+#recipe {
+  margin-top: 6%;
+  margin-left: 44%;
+  font-weight: 900;
+}
+
+/* #favouritesButton {
+  margin-left: 55%;
+} */

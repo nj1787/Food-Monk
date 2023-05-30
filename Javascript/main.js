@@ -7,7 +7,7 @@ const defaultMessage = `Search For A Meal To Be Displayed Here`;
 const submitBtn = document.querySelector("#submitButton");
 const clearBtn = document.querySelector("#clearSearch");
 const parentDiv = document.querySelector("#meals-data-display");
-parentDiv.innerHTML = `<h3 class="text-center" style="margin-left:5%">${defaultMessage}</h3>`;
+parentDiv.innerHTML = `<h3 class="text-center" style="margin-top:5%">${defaultMessage}</h3>`;
 
 submitBtn.addEventListener("click", (event) => {
   event.preventDefault();
@@ -16,6 +16,7 @@ submitBtn.addEventListener("click", (event) => {
   const mealName = mealInput.value;
   if (mealName === "") {
     alert("Empty Meal Search Not Allowed");
+    parentDiv.innerHTML = `<h3 class="text-center" style="margin-top:5%">${defaultMessage}</h3>`;
     return;
   }
 
@@ -60,15 +61,15 @@ submitBtn.addEventListener("click", (event) => {
 
     /*Create A Button Group Where Both Buttons Would Be Displayed*/
     const buttonGroup = document.createElement("div");
-    buttonGroup.setAttribute("class", "d-grid gap-2 d-md-block");
-    buttonGroup.style.marginLeft = "25%";
+    // buttonGroup.setAttribute("class", "d-grid gap-2 d-md-block");
+    // buttonGroup.style.marginLeft = "25%";
 
     /*Show Details Button*/
     const detailsPageLink = document.createElement("a");
     detailsPageLink.setAttribute("href", "../HTML/singleMeal.html");
     const detailsButton = document.createElement("button");
     detailsButton.setAttribute("class", "btn btn-primary");
-    detailsButton.style.marginLeft = "5%";
+    detailsButton.style.marginLeft = "35%";
     detailsButton.textContent = `Show Details`;
     detailsPageLink.appendChild(detailsButton);
 
