@@ -33,10 +33,15 @@ document.addEventListener("DOMContentLoaded", () => {
       event.preventDefault();
       const parentElement = event.target.parentElement;
 
+      //For Debugging
+      console.log(parentElement);
+
       // Remove the item from the DOM
       parentElement.remove();
 
       // Remove the item from LocalStorage
+
+      const mealName = parentElement.textContent;
 
       removeMealFromLocalStorage(mealName);
     });
