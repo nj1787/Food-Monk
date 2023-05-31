@@ -24,7 +24,6 @@ submitBtn.addEventListener("click", (event) => {
   var xhrRequest = new XMLHttpRequest();
   xhrRequest.onload = function () {
     var jsonResponse = JSON.parse(xhrRequest.response);
-
     const mealImage = String(jsonResponse.meals[0].strMealThumb) + "/preview";
     const mealRecipe = String(jsonResponse.meals[0].strInstructions);
     const vegNonVeg = String(jsonResponse.meals[0].strCategory);
